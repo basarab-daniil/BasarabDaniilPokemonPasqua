@@ -59,13 +59,5 @@ def apri_pacchetto_route():
         punti_utente += punti_guadagnati
     return redirect(url_for('home'))
 
-@app.route('/mostra_collezione', methods=['GET'])
-def mostra_collezione_route():
-    return render_template('collezione.html', collezione=collezione)
-
-@app.route('/mostra_punti', methods=['GET'])
-def mostra_punti_route():
-    return render_template('punti.html', punti_utente=punti_utente)
-
 if __name__ == '__main__':
     app.run(debug=True)
